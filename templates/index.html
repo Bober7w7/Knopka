@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статус кнопки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .status-indicator {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .on {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .off {
+            background-color: #f44336;
+            color: white;
+        }
+        .controls {
+            margin-top: 2rem;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Статус Кнопки</h1>
+        <div class="status-indicator {{ 'on' if status == 'ON' else 'off' }}">
+            {{ status }}
+        </div>
+        <div class="controls">
+            <p>Для смены статуса используйте ссылки:</p>
+            <a href="/?status=knopka_on">Включить (knopka_on)</a> | 
+            <a href="/?status=knopka_off">Выключить (knopka_off)</a>
+        </div>
+    </div>
+</body>
+</html>
